@@ -16,11 +16,11 @@ public class RetryListerner implements IAnnotationTransformer{
 			Method arg3) {
 		// TODO Auto-generated method stub
 		
-		Class<? extends IRetryAnalyzer> analyzer = arg0.getRetryAnalyzerClass();
 		
-		if (analyzer == null)	{
+		
+		
 			arg0.setRetryAnalyzer(Retry.class);
-		}
+		
 
 	}
 
