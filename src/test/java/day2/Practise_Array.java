@@ -7,9 +7,48 @@ public class Practise_Array {
 	public static void main(String[] args) {
 		Practise_Array p= new Practise_Array();
 		//p.inputArray(3);
-		p.addArray();
-		
+		//p.addArray();
+		//removeDuplicates();
+         p.findElement();
+      
 	}
+	public void findElement()
+	{
+		 int[] a = {1, 2, 2, 3, 3, 4, 4, 4, 5, 5, 6};
+	        int n = 0;
+	        int c=0;
+	        for(int i=0; i<a.length;i++)
+	        {
+	        	if(a[i]==n)
+	        	{
+	        		c++;
+	         		System.out.println("Found the element: "+n);
+	        	}	
+	        }
+	        System.out.println("The Element count is: "+c);
+
+	}
+	 public static int removeDuplicates() {
+		 int[] a = {1, 2, 2, 3, 3, 4, 4, 4, 5, 5, 6};
+	        int n = a.length;
+	        if (n == 0 || n == 1) {
+	            return n;
+	        }
+	        int j = 0;
+	        for (int i = 0; i < n - 1; i++) {
+	            if (a[i] != a[i + 1]) {
+	                a[j++] = a[i];
+	            }
+	        }
+	        a[j++] = a[n - 1];
+	        for (int i = 0; i < j; i++) {
+	            System.out.print(a[i] + " ");
+	        }
+			
+	        return j;
+	       
+	    }
+	
 	public int[] inputArray(int j)
 	{
 		Scanner sc= new Scanner(System.in);
